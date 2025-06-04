@@ -1,0 +1,246 @@
+System 1: Sign Language Translation System
+
+Single-agent LLM user stories: 
+1. User Story (Transparency - Explainability): As a hearing person using the app, I want to understand how the system translates my video input so that I can trust the accuracy and fairness of the translation. 
+
+Acceptance Criteria: 
+The app provides a brief, easily understandable explanation of the AI technology used for translation (e.g., a simplified description of the model, its training data, and its limitations). 
+The app includes a section explaining potential sources of error in the translation, such as lighting conditions, hand occlusion, and variations in signing styles. 
+The explanation is available in both Arabic and English. A link to a more detailed technical explanation (for advanced users) is provided. 
+The app clearly indicates when the system is unable to provide a translation, explaining the reason (e.g., low video quality, unknown sign). 
+
+2. User Story (Fairness - Inclusion): As a deaf woman wearing a hijab, I want the system to accurately recognize my signs, regardless of my clothing or cultural practices. 
+Acceptance Criteria: 
+The system's training data includes diverse representations of Saudi Sign Language users, including women wearing hijabs, niqabs, and other culturally appropriate attire. (Specific numbers of training samples for each category should be specified, if possible, e.g., at least 100 videos of women wearing hijabs, at least 50 videos of women wearing niqabs, etc.). 
+The system achieves at least 95% accuracy in translating signs performed by women wearing hijabs, based on testing with a representative dataset. (Similarly, accuracy targets need to be specified for other categories). The system is tested and validated for users of different age groups (e.g., children aged 5-12, adults aged 18-65, elderly aged 65+), with specific accuracy metrics for each group. 
+
+3. User Story (Data - Privacy): As a deaf person using the app, I want my sign language videos to be handled securely and my privacy protected. 
+Acceptance Criteria: 
+All video data is encrypted both in transit and at rest. 
+The app obtains explicit consent from the user before uploading any video data to the cloud. 
+User data is anonymized before being used for model improvement, ensuring no personally identifiable information is retained (only the sign language information will be used). 
+A clear and concise privacy policy is available within the app and on the website, detailing data collection, storage, and usage practices, compliant with relevant Saudi Arabian data protection laws. 
+The data retention policy specifies how long user data is stored and the process for data deletion upon user request. 
+
+4. User Story (Transparency - System Reliability): As a help desk operator using the web application, I need to know the system's reliability and limitations to manage user expectations effectively. 
+Acceptance Criteria: 
+The web application displays the system's current uptime and any known issues or scheduled maintenance. The system provides a real-time reliability metric (e.g., translation accuracy rate over the past hour). 
+A clear error message is displayed if the system fails to process a sign, indicating the reason (e.g., network connectivity issues, server overload). 
+Regular reports on system performance are generated and made available to stakeholders (e.g., weekly or monthly reports on accuracy, uptime, and error rates). 
+A feedback mechanism is implemented for users to report translation errors or system malfunctions. 
+
+5. User Story (Fairness - Accessibility): As a visually impaired person needing assistance with the web application, I want access to all its functions through assistive technology. 
+Acceptance Criteria: 
+The web application is fully compliant with WCAG (Web Content Accessibility Guidelines) 2.1 Level AA. 
+All interactive elements have appropriate keyboard navigation. Screen reader compatibility is ensured throughout the application. 
+Alternative text is provided for all images and non-text elements. 
+Color contrast ratios meet WCAG standards. 
+The application supports different screen reader software (e.g., JAWS, NVDA).
+
+
+
+Single-agent LLM Derived Requirements (24 Requirements)
+
+
+1- The app shall provide a brief, easily understandable explanation of the AI technology used for translation, including a simplified description of the model, its training data, and its limitations.
+2- The app shall include a section explaining potential sources of error in the translation, such as lighting conditions, hand occlusion, and variations in signing styles.
+3- The explanation of AI technology and potential error sources shall be available in both Arabic and English.
+4- The app shall provide a link to a more detailed technical explanation for advanced users.
+5- The app shall clearly indicate when the system is unable to provide a translation and explain the reason (e.g., low video quality, unknown sign).
+
+6- The system's training data shall include diverse representations of Saudi Sign Language users, including women wearing hijabs, niqabs, and other culturally appropriate attire.
+7- The system shall achieve at least 95% accuracy in translating signs performed by women wearing hijabs, based on testing with a representative dataset.
+8- The system shall be tested and validated for users of different age groups (e.g., children aged 5-12, adults aged 18-65, elderly aged 65+), with specific accuracy metrics defined and reported for each group.
+
+9- All video data shall be encrypted both in transit and at rest.
+10- The app shall obtain explicit consent from the user before uploading any video data to the cloud.
+11. User data shall be anonymized before being used for model improvement, ensuring no personally identifiable information is retained.
+12. A clear and concise privacy policy shall be available within the app and on the website, detailing data collection, storage, and usage practices, and shall be compliant with relevant Saudi Arabian data protection laws.
+13- The data retention policy shall specify how long user data is stored and outline the process for data deletion upon user request.
+
+14- The web application shall display the system's current uptime and any known issues or scheduled maintenance.
+15- The system shall provide a real-time reliability metric (e.g., translation accuracy rate over the past hour).
+16. A clear error message shall be displayed if the system fails to process a sign, indicating the reason (e.g., network connectivity issues, server overload).
+17. Regular reports on system performance (e.g., accuracy, uptime, and error rates) shall be generated and made available to stakeholders.
+18. A feedback mechanism shall be implemented for users to report translation errors or system malfunctions.
+
+19- The web application shall be fully compliant with WCAG (Web Content Accessibility Guidelines) 2.1 Level AA.
+20. All interactive elements in the web application shall have appropriate keyboard navigation.
+21. Screen reader compatibility shall be ensured throughout the web application.
+22. Alternative text shall be provided for all images and non-text elements in the web application.
+23. Color contrast ratios in the web application shall meet WCAG standards.
+24- The web application shall support different screen reader software (e.g., JAWS, NVDA).
+
+
+
+Multi-agent LLM user stories: 
+
+
+1- User Story: As a user, I want a clear explanation of how the system works so I can understand its functionality. 
+Acceptance Criteria: The app provides a concise, accessible description of the system's translation process in Arabic and English, explaining its limitations. 
+
+2- User Story: As a user, I want to see a confidence level for each translation to assess its reliability. 
+Acceptance Criteria: The app displays a numerical confidence score (e.g., 0-100%) for each translated sentence. 
+
+3- User Story: As a user, I want a way to report issues or inaccuracies to improve the system. 
+Acceptance Criteria: The app provides a simple, accessible feedback mechanism (e.g., a button or email link) to report translation errors or concerns. Responses to reports are provided within 72 hours. 
+
+4- User Story: As a user, I want to know what data was used to train the AI model to understand its potential biases. 
+Acceptance Criteria: The app includes a link to a publicly accessible document detailing the data sources used for training, including precise age ranges (with counts), gender breakdown (with counts), geographic distribution within Saudi Arabia (specifying regions and signer counts), and a detailed description of signing styles represented (with examples and counts). The document justifies the choice of specific bias mitigation techniques, explaining the rationale based on an analysis of identified biases in the dataset. 
+
+
+5- User Story: As a deaf user, I want the system to accurately translate my signs, regardless of my signing style. 
+Acceptance Criteria: The system achieves an accuracy rate of X% (defined as the percentage of correctly translated sentences) across diverse SASL signing styles, measured by independent evaluation using [Name of Standardized Evaluation Metric]. This accuracy will be assessed separately for each defined demographic subgroup (age, gender, region, and signing style), with no subgroup showing a performance difference exceeding Z% (Z% = [Specify value and justification based on statistical power analysis or prior research]). 
+
+6- User Story: As a stakeholder, I want regular monitoring of the system’s performance to detect and address biases. 
+Acceptance Criteria: The system's performance metrics (accuracy, precision, recall) are monitored and reported weekly using [Specify tool or technique]. Bias detection will be performed using [Specify method]. Actions to mitigate identified biases will be documented and include [list specific actions]. The effectiveness of bias mitigation strategies will be assessed by comparing subgroup performance metrics before and after implementation, demonstrating a statistically significant reduction in performance disparities (p<0.05). 
+
+7- User Story: As a user, I want the system to work reliably in various lighting and environmental conditions. 
+Acceptance Criteria: The system maintains an accuracy rate of Y% (defined as the percentage of correctly translated sentences) under varying lighting conditions and background noise levels, as verified through testing. This accuracy will be independently assessed for different demographic subgroups as in Requirement 5. 
+
+
+8- User Story: As a user, I want my sign language data to be anonymized. 
+Acceptance Criteria: All video data will be anonymized using [Specify anonymization techniques] before processing. Specifically, [List specific PII to be removed or transformed]. The anonymization process will be audited to ensure compliance with data privacy regulations and will follow [Name of anonymization standard or guideline]. The process will be evaluated using re-identification risk assessment techniques. Anonymized data will be retained for [Specify retention period] after which it will be [Specify handling e.g., securely deleted]. The anonymization techniques will be reviewed and updated at least annually to address evolving best practices and technology. 
+
+9- User Story: As a user, I want my sign language data to be encrypted during transmission and storage. 
+Acceptance Criteria: All data transmitted to and from the app is encrypted using TLS 1.3 or a higher standard. All data stored on the cloud server is encrypted at rest using AES-256 encryption. 
+
+10- User Story: As a user, I want the app to have a clear privacy policy. 
+Acceptance Criteria: A privacy policy clearly outlining data collection, usage, storage, and security practices, complying with all applicable Saudi Arabian and international regulations, is readily available in Arabic and English. 
+
+11- User Story: As a user, I want to be able to opt out of data collection. 
+Acceptance Criteria: Users can easily opt out of data collection at any time through an in-app setting. Opting out will prevent further data collection but will not delete existing data unless requested separately. 
+
+12- User Story: As a user, I want to be able to request deletion of my data. 
+Acceptance Criteria: Users can request the deletion of their data via a designated contact point, and this data will be deleted within 30 days. 
+
+13- User Story: As a developer, I want the system to only use my data to improve the service. 
+Acceptance Criteria: Data will be used exclusively for improving model performance, measured by improvements in [Specify metrics]. This will be evaluated using A/B testing comparing the model trained with new data against a baseline model. The A/B test will use a sample of [Specify sample size] users, selected using stratified sampling to ensure proportional representation from different demographic groups within the Saudi Arabian Deaf community, defined as [List demographic groups and sampling methodology]. A statistically significant improvement (p<0.05) will be required to accept the improvement. 
+
+
+14- User Story: As an institutional user, I want the web application to meet accessibility standards. 
+Acceptance Criteria: The web application achieves a WCAG 2.1 AA conformance rating as verified by an accessibility audit. 
+
+15- User Story: As an institutional user, I want strong data security measures in the web application. 
+Acceptance Criteria: The web application implements the following ISO 27001 controls: [List specific Annex A controls with control objectives and control numbers]. Compliance will be verified through annual independent security audits and penetration testing performed [Specify frequency e.g., semi-annually]. 
+
+16- User Story: As an institutional user, I want clear data management policies for the web application. 
+Acceptance Criteria: Clear and documented policies govern data access, storage, retention, and disposal that are consistent with organizational and Saudi Arabian legal requirements. 
+
+17- User Story: As a user, I want to understand why the system provided a specific translation. 
+Acceptance Criteria: The system will provide an explanation of the AI's decision-making process for each translation, using XAI techniques like LIME or SHAP. The explanation will include [Specify level of detail e.g., top three contributing features with associated weights] and will be presented in [Specify format e.g., text-based explanation, visual diagram]. 
+
+18- User Story: As a user with a disability, I want to be able to easily use the application. 
+Acceptance Criteria: The system will meet WCAG 2.1 AA conformance and include features accommodating diverse cognitive and sensory abilities, supporting assistive technologies such as [List specific examples e.g., screen readers, switch access, voice input/output systems]. 
+
+19- User Story: As a developer, I want to ensure high-quality data for training the AI model. 
+Acceptance Criteria: A rigorous data validation and verification process will be implemented, including inter-annotator agreement (Cohen's Kappa above 0.8). The methodology for data annotation will follow established best practices and be documented. 
+
+20- User Story: As an institutional user, I want a plan to manage potential data security incidents. 
+Acceptance Criteria: A comprehensive incident response plan outlining procedures for detection, containment, eradication, recovery, and post-incident activity will be in place. This plan includes clearly defined roles and responsibilities, communication protocols, and regular training for relevant personnel.
+
+
+
+Multi-agent LLM Derived Requirements (28 Requirements)
+
+1- The app shall provide a concise, accessible description of the system's translation process in Arabic and English, explaining its limitations.
+2- The app shall display a numerical confidence score (e.g., 0-100%) for each translated sentence.
+3- The app shall provide a simple, accessible feedback mechanism to report translation errors or concerns.
+4- Responses to feedback reports shall be provided within 72 hours.
+5- The app shall include a link to a publicly accessible document detailing the data sources used for training (demographics, styles, counts).
+6- The training data documentation shall justify the choice of specific bias mitigation techniques based on identified dataset biases.
+
+7- The system shall achieve an accuracy rate of X% across diverse SASL signing styles, with performance assessed for subgroups and limited disparity (not exceeding Z%).
+8- The system's performance metrics (accuracy, precision, recall) shall be monitored and reported weekly.
+9- Bias detection shall be performed using [Specify method].
+10-  Actions to mitigate identified biases shall be documented and include [list specific actions].
+11-  The effectiveness of bias mitigation strategies shall be assessed and demonstrate statistically significant reduction in disparities.
+12-  The system shall maintain an accuracy rate of Y% under varying lighting and environmental conditions, assessed for demographic subgroups.
+
+13-  The system shall anonymize all video data using specified techniques before processing, including removal/transformation of defined PII.
+14-  The system's anonymization process shall be audited for compliance with data privacy regulations, follow specified standards, and be evaluated using re-identification risk assessment techniques.
+15-  The system shall define and implement retention periods for anonymized data, specify secure handling post-retention, and annually review/update anonymization techniques.
+16-  All data transmitted to and from the app shall be encrypted using TLS 1.3 or a higher standard.
+17-  All data stored on the cloud server shall be encrypted at rest using AES-256 encryption.
+18-  A readily available privacy policy (Arabic/English) shall clearly outline data collection, usage, storage, and security practices, complying with applicable regulations.
+19-  Users shall be able to opt out of data collection at any time through an in-app setting, preventing further data collection (existing data not auto-deleted).
+20-  Users shall be able to request the deletion of their data via a designated contact point, with data deleted within 30 days.
+21-  Data collected shall be used exclusively for improving model performance, with improvement evaluated via A/B testing showing statistically significant results on a representative sample.
+
+22-  The web application shall achieve a WCAG 2.1 AA conformance rating, verified by an accessibility audit.
+23-  The web application shall implement specified ISO 27001 controls, with compliance verified through annual independent security audits and penetration testing.
+24-  Clear and documented policies shall govern data access, storage, retention, and disposal for the web application, consistent with organizational and legal requirements.
+
+25-  The system shall provide an explanation of the AI's decision-making process for each translation using specified XAI techniques and level of detail.
+26-  The application shall meet WCAG 2.1 AA conformance and include features accommodating diverse cognitive/sensory abilities, supporting specified assistive technologies.
+27-  A rigorous data validation and verification process for training data shall be implemented, including inter-annotator agreement (e.g., Cohen's Kappa > 0.8) and documented methodology.
+28-  A comprehensive incident response plan shall be in place, outlining procedures for detection, containment, eradication, recovery, post-incident activity, roles, communication, and training.
+
+
+
+
+System 2: Arabic Fake Review Detection System
+
+Multi-agent LLM Derived Requirements
+
+1- The system shall provide a clear and concise explanation in accessible Arabic of the specific features (e.g., "high cosine similarity to other reviews") that triggered the fake review flag.
+2- The explanation provided to a user for a flagged review shall avoid technical jargon and be understandable to a non-technical user.
+3- The system shall provide an appeal mechanism allowing users to challenge the system's decision of flagging a review as fake, with provisions for supporting evidence.
+4- The appeal process for flagged reviews shall be clearly documented in Arabic and English.
+5- The system shall log all appeals concerning flagged reviews and their outcomes, ensuring traceability and accountability.
+
+6- The system shall demonstrate equivalent accuracy in detecting fake reviews across major Arabic dialects (e.g., Egyptian Arabic, Levantine Arabic, Gulf Arabic, Modern Standard Arabic), achieving at least 90% accuracy in each dialect in A/B testing against a manually verified ground truth dataset.
+7-  Accuracy metrics for fake review detection shall be reported separately for each major Arabic dialect.
+8- The training data for the AI model used for fake review detection shall include a representative sample of reviews from various Arabic dialects, with the proportion of each dialect reflecting its relative prevalence in relevant online reviews.
+9- The system's documentation shall explicitly state its ability to handle diverse Arabic dialects for the purpose of fake review detection.
+
+10-  The system shall only process review text and associated metadata (such as timestamps and product IDs) that are necessary for fake review detection.
+11-  Personally identifiable information (PII) of reviewers, including user names, email addresses, and IP addresses, shall be anonymized before being processed for fake review detection.
+12-  The system shall comply with relevant data privacy regulations (e.g., GDPR, if applicable) regarding the storage, access control, and data retention of review data.
+13-  The data retention policy for review data shall be clearly documented.
+14-  All data processing activities related to fake review detection shall be logged and auditable to ensure compliance and transparency.
+
+15-  The system's sentiment analysis component shall achieve a minimum of 85% accuracy in sentiment classification (positive, negative, neutral) on a benchmark Arabic sentiment analysis dataset.
+16-  The performance of the sentiment analysis component shall be evaluated using appropriate metrics such as precision, recall, and F1-score.
+17-  The sentiment analysis component's performance shall be regularly monitored and evaluated against updated benchmark datasets.
+18-  A detailed report of sentiment analysis performance shall be regularly generated, including an analysis of potential sources of bias (e.g., specific words, phrases, or dialectal variations that are misclassified).
+
+19-  All system messages, explanations, and appeal instructions related to fake review flagging shall be compatible with screen readers and other assistive technologies.
+20-  The system's user interface components related to review feedback and appeals shall meet WCAG (Web Content Accessibility Guidelines) Level AA standards for visual accessibility.
+21-  The system shall provide alternative text descriptions for all images and visual elements within the review feedback and appeal interface.
+
+Multi-agent LLM Derived Requirements (25 Requirements)
+
+1- For a review flagged as potentially fake, the system shall provide a concise explanation in Arabic, referencing specific features (e.g., "Your review was flagged due to an unusually high number of positive words (X) compared to the average (Y) for this product, and a cosine similarity score of Z with other reviews flagged as potentially fake.").
+2- The explanation provided to a user for a flagged review shall be understandable to a non-technical user.
+3- A clear appeals process for flagged reviews, with instructions in Arabic and a 72-hour response timeline, shall be available.
+4- Appeals related to flagged reviews shall be reviewed by a trained human moderator using documented guidelines.
+5- A detailed, auditable log of all actions related to review flagging, appeals, and their resolutions shall be maintained, accessible for audits and regulatory compliance.
+
+6- The AI model for fake review detection shall be trained on at least 100,000 reviews, proportionally representing various dialects, writing styles, and sentiment expressions, and the training methodology shall be documented.
+7- Bias assessment (e.g., statistical parity and equalized odds, p<0.05) for the fake review detection model shall be conducted and documented.
+8- Quarterly automated and manual audits shall assess bias in fake review detection against specific demographic groups (e.g., gender, age, region, dialect) and writing styles, using statistical analysis and human review based on pre-defined guidelines.
+9- Quarterly performance evaluations (including precision, recall, F1-score, AUC) for fake review detection shall be conducted across user segments (defined by demographic categories), including statistical significance tests (e.g., t-tests with p<0.05).
+10-  Procedures shall be established and documented to retrain models, adjust feature weights, or revise detection thresholds to mitigate identified biases in fake review detection, including documentation of the impact on performance and bias metrics.
+
+11-  All Personally Identifiable Information (PII) (e.g., names, emails, IP addresses, location data, user IDs, device identifiers) shall be removed or pseudonymized before being used for fake review detection, unless explicit user consent is obtained for specific uses.
+12-  Data anonymization techniques employed by the system shall adhere to data minimization principles.
+13-  Compliance with specified data privacy regulations (e.g., GDPR, CCPA, and relevant local laws) shall be documented, regularly audited by a third party, and a process shall exist for monitoring regulatory changes.
+14-  Secure storage measures (including encryption at rest and in transit), access controls, penetration testing (conducted at least annually), and intrusion detection systems shall be implemented to protect review data against unauthorized access.
+15-  Defined data retention policies (e.g., retention for 3 years) and secure deletion procedures for review data shall be established and followed.
+
+16-  A clear privacy policy, written in Arabic, shall describe data collection, usage, and protection practices for the fake review detection system.
+17-  Quarterly reports shall be published showing aggregate statistics (e.g., percentage of flagged reviews, false positive rates, performance metrics) related to fake review detection, without disclosing individual user data.
+18-  A technical report documenting the fake review detection system's methodology (including algorithms, features, preprocessing steps, and limitations) shall be maintained and undergo internal review to balance transparency with the protection of sensitive system information.
+
+19-  The system shall track and analyze false positives in fake review detection using data from user appeals, manual reviews, and comparisons with human-validated datasets.
+20-  Users whose reviews are confirmed through the appeal process or internal review as incorrectly flagged shall be notified within 24 hours, their reviews restored promptly, and provided with an explanation and apology.
+21-  Quarterly reports shall track and analyze false positive rates for fake review detection, identifying trends and contributing factors to improve the system.
+
+22-  For reviews flagged as potentially fake, the system shall provide a brief, user-friendly explanation in Arabic, generated using SHAP or a similar XAI technique, highlighting at least three key features contributing to the decision with at least 90% confidence.
+
+23-  The fake review detection system shall maintain at least 99.9% uptime, implement robust error handling and logging mechanisms, and ensure regular data backups are performed.
+24-  The fake review detection system shall achieve at least 95% accuracy across various Arabic dialects and writing styles, with performance measured using F1 score, precision, and recall.
+25-  Processes for data validation, cleaning, and quality checks shall be implemented to ensure the accuracy and consistency of training and operational datasets for fake review detection, and data quality metrics shall be regularly monitored and reported.
+
+
